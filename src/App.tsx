@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import FinishedQuiz from "./FinishedQuiz";
 import { questionArray } from "./libs/QuestionTypes";
 import QuestionView from "./QuestionView";
 import StartScreen from "./StartScreen";
@@ -8,6 +9,7 @@ function App() {
     const [appStarted, setAppStarted] = React.useState(false);
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
     const [questions, setQuestions] = React.useState<questionArray>([]);
+    const [quizEnded, setQuizEnded] = React.useState(false);
     interface questionsData {
         category: string;
         type: string;
@@ -46,6 +48,16 @@ function App() {
             setCurrentQuestion((prevValue: number) => {
                 return prevValue + 1;
             });
+        } else {
+            setQuizEnded(true);
+            setCurrentQuestion(0);
+        }
+    }
+    function previousQuestion(): void {
+        if (currentQuestion > 0) {
+            setCurrentQuestion((prevValue: number) => {
+                return prevValue - 1;
+            });
         }
     }
     function fixFormattingArray(originalStrings: string[]): string[] {
@@ -65,7 +77,7 @@ function App() {
             .replace(/&#x2F;/g, "/");
     }
 
-    return appStarted ? (
+    /* return appStarted ? (
         <QuestionView
             currentQuestion={currentQuestion}
             totalQuestions={questions.length}
@@ -74,6 +86,16 @@ function App() {
         />
     ) : (
         <StartScreen startQuizHandler={startApp} />
+    ); */
+    startApp();
+    return (
+        <FinishedQuiz
+            currentQuestion={currentQuestion}
+            totalQuestions={questions.length}
+            questionData={questions[currentQuestion]}
+            nextQuestionHandler={nextQuestion}
+            previousQuestionHandler={previousQuestion}
+        />
     );
 }
 

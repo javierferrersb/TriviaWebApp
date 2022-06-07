@@ -31,6 +31,8 @@ function QuestionView(props: QuestionViewProps) {
                 nextQuestionHandler={() => {
                     props.nextQuestionHandler(selectedOption);
                 }}
+                IsFinished={false}
+                previousQuestionHandler={() => {}}
             />
         </div>
     );
