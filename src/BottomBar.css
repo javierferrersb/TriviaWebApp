@@ -26,6 +26,7 @@
     border-radius: 16px;
     width: 20%;
     height: 100%;
+    transition: width 0.5s ease-in-out;
 }
 .progress-text {
     margin-left: 15px;

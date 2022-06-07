@@ -1,11 +1,20 @@
 import React from "react";
 import "./Option.css";
 
-function Option() {
+interface OptionProps {
+    text: string;
+    id: number;
+    letter: string;
+    isSelected: boolean;
+    onClick: () => void;
+}
+function Option(props: OptionProps) {
+    let className: string =
+        "question-option" + (props.isSelected ? " active" : "");
     return (
-        <div className="question-option">
-            <div className="option-letter">A</div>
-            <div className="option-text">Option 1</div>
+        <div className={className} onClick={props.onClick}>
+            <div className="option-letter">{props.letter}</div>
+            <div className="option-text">{props.text}</div>
         </div>
     );
 }

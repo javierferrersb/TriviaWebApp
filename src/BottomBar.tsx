@@ -1,16 +1,35 @@
 import React from "react";
 import "./BottomBar.css";
 
-function BottomBar() {
+interface BottomBarProps {
+    currentQuestion: number;
+    totalQuestions: number;
+    nextQuestionHandler: () => void;
+}
+
+function BottomBar(props: BottomBarProps) {
     return (
         <div className="bottom-bar">
             <div className="progress-area">
                 <div className="progress-indicator">
-                    <div className="progress-indicator-fill"></div>
+                    <div
+                        className="progress-indicator-fill"
+                        style={{
+                            width:
+                                ((props.currentQuestion + 1) /
+                                    props.totalQuestions) *
+                                    100 +
+                                "%",
+                        }}
+                    ></div>
                 </div>
-                <div className="progress-text">1 / 5</div>
+                <div className="progress-text">
+                    {props.currentQuestion + 1} / {props.totalQuestions}
+                </div>
             </div>
-            <button className="next-button">CONTINUE</button>
+            <button className="next-button" onClick={props.nextQuestionHandler}>
+                CONTINUE
+            </button>
         </div>
     );
 }
