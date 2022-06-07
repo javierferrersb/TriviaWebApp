@@ -18,7 +18,26 @@ function App() {
     }
 
     function startApp(): void {
-        setAppStarted(true);
+        fetch("https://opentdb.com/api.php?amount=5&type=multiple")
+            .then((response) => response.json())
+            .then((data) => {
+                setQuestions(
+                    data.results.map((question: questionsData) => {
+                        return {
+                            question: fixFormatting(question.question),
+                            answers: fixFormattingArray(
+                                question.incorrect_answers
+                            )
+                                .concat(fixFormatting(question.correct_answer))
+                                .sort((a, b) => 0.5 - Math.random()),
+                            correctAnswer: fixFormatting(
+                                question.correct_answer
+                            ),
+                        };
+                    })
+                );
+                setAppStarted(true);
+            });
     }
 
     function nextQuestion(previousAnswer: string): void {
@@ -46,28 +65,6 @@ function App() {
             .replace(/&#x27;/g, "'")
             .replace(/&#x2F;/g, "/");
     }
-
-    React.useEffect(() => {
-        fetch("https://opentdb.com/api.php?amount=5&type=multiple")
-            .then((response) => response.json())
-            .then((data) => {
-                setQuestions(
-                    data.results.map((question: questionsData) => {
-                        return {
-                            question: fixFormatting(question.question),
-                            answers: fixFormattingArray(
-                                question.incorrect_answers
-                            )
-                                .concat(fixFormatting(question.correct_answer))
-                                .sort((a, b) => 0.5 - Math.random()),
-                            correctAnswer: fixFormatting(
-                                question.correct_answer
-                            ),
-                        };
-                    })
-                );
-            });
-    }, [appStarted]);
 
     return appStarted ? (
         <QuestionView
