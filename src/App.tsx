@@ -23,7 +23,7 @@ function App() {
 
     function nextQuestion(previousAnswer: string): void {
         questions[currentQuestion].userAnswer = previousAnswer;
-        console.log(questions[currentQuestion].userAnswer);
+        console.log(questions[currentQuestion].correctAnswer);
         if (currentQuestion < questions.length - 1) {
             setCurrentQuestion((prevValue: number) => {
                 return prevValue + 1;
@@ -57,7 +57,9 @@ function App() {
                             question: fixFormatting(question.question),
                             answers: fixFormattingArray(
                                 question.incorrect_answers
-                            ).concat(fixFormatting(question.correct_answer)),
+                            )
+                                .concat(fixFormatting(question.correct_answer))
+                                .sort((a, b) => 0.5 - Math.random()),
                             correctAnswer: fixFormatting(
                                 question.correct_answer
                             ),
