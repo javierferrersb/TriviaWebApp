@@ -1,8 +1,9 @@
 import React from "react";
 import "./App.css";
+import StartScreen from "./StartScreen";
 
 function App() {
-    return <div className="App"></div>;
+    return <StartScreen />;
 }
 
 export default App;
