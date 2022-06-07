@@ -1,0 +1,43 @@
+.question-option {
+    width: 500px;
+    height: 75px;
+
+    background: #fffbff;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.option-letter {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: #5d5d72;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21.6358px;
+    line-height: 125%;
+    color: #ffffff;
+
+    margin-left: 25px;
+}
+.option-text {
+    margin-left: 40px;
+
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 125%;
+
+    color: #060710;
+}
+
+@media only screen and (max-width: 600px) {
+}

@@ -1,0 +1,35 @@
+.question-area {
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 100px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+.question-text {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 125%;
+
+    text-align: center;
+
+    color: #01006e;
+}
+.question-options {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 600px) {
+    .question-area {
+        margin-bottom: 125px;
+    }
+}

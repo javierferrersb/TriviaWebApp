@@ -1,3 +1,8 @@
 body {
     background: #e4e1ec;
 }
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
