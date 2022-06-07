@@ -8,7 +8,7 @@ interface QuestionViewProps {
     currentQuestion: number;
     totalQuestions: number;
     questionData: question;
-    nextQuestionHandler: () => void;
+    nextQuestionHandler: (answer: string) => void;
 }
 function QuestionView(props: QuestionViewProps) {
     const [selectedOption, setSelectedOption] = React.useState<string>("");
@@ -23,7 +23,9 @@ function QuestionView(props: QuestionViewProps) {
             <BottomBar
                 currentQuestion={props.currentQuestion}
                 totalQuestions={props.totalQuestions}
-                nextQuestionHandler={props.nextQuestionHandler}
+                nextQuestionHandler={() => {
+                    props.nextQuestionHandler(selectedOption);
+                }}
             />
         </div>
     );

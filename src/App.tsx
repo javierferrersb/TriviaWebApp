@@ -21,7 +21,9 @@ function App() {
         setAppStarted(true);
     }
 
-    function nextQuestion(): void {
+    function nextQuestion(previousAnswer: string): void {
+        questions[currentQuestion].userAnswer = previousAnswer;
+        console.log(questions[currentQuestion].userAnswer);
         if (currentQuestion < questions.length - 1) {
             setCurrentQuestion((prevValue: number) => {
                 return prevValue + 1;
