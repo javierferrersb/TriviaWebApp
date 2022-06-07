@@ -12,6 +12,10 @@ interface QuestionViewProps {
 }
 function QuestionView(props: QuestionViewProps) {
     const [selectedOption, setSelectedOption] = React.useState<string>("");
+
+    React.useEffect(() => {
+        setSelectedOption("");
+    }, [props.questionData]);
     return (
         <div className="question-view">
             <QuestionArea
@@ -23,6 +27,7 @@ function QuestionView(props: QuestionViewProps) {
             <BottomBar
                 currentQuestion={props.currentQuestion}
                 totalQuestions={props.totalQuestions}
+                IsEnabled={selectedOption !== ""}
                 nextQuestionHandler={() => {
                     props.nextQuestionHandler(selectedOption);
                 }}

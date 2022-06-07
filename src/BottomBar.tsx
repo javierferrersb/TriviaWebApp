@@ -5,6 +5,7 @@ interface BottomBarProps {
     currentQuestion: number;
     totalQuestions: number;
     nextQuestionHandler: () => void;
+    IsEnabled: Boolean;
 }
 
 function BottomBar(props: BottomBarProps) {
@@ -27,7 +28,11 @@ function BottomBar(props: BottomBarProps) {
                     {props.currentQuestion + 1} / {props.totalQuestions}
                 </div>
             </div>
-            <button className="next-button" onClick={props.nextQuestionHandler}>
+            <button
+                disabled={!props.IsEnabled}
+                className="next-button"
+                onClick={props.nextQuestionHandler}
+            >
                 CONTINUE
             </button>
         </div>

@@ -58,6 +58,17 @@
     transition: box-shadow 0.2s ease-in-out;
 }
 
+.next-button:disabled {
+    cursor: not-allowed;
+    background: #e4e1ec;
+    color: #1b1b1f;
+}
+.next-button:disabled:hover {
+    box-shadow: none;
+}
+.next-button:disabled:active {
+    background: #e4e1ec;
+}
 .next-button:hover {
     box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.2);
 }
