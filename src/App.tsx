@@ -28,6 +28,22 @@ function App() {
             });
         }
     }
+    function fixFormattingArray(originalStrings: string[]): string[] {
+        return originalStrings.map((originalString: string) => {
+            return fixFormatting(originalString);
+        });
+    }
+
+    function fixFormatting(originalString: string): string {
+        return originalString
+            .replace(/&quot;/g, '"')
+            .replace(/&#039;/g, "'")
+            .replace(/&amp;/g, "&")
+            .replace(/&lt;/g, "<")
+            .replace(/&gt;/g, ">")
+            .replace(/&#x27;/g, "'")
+            .replace(/&#x2F;/g, "/");
+    }
 
     React.useEffect(() => {
         fetch("https://opentdb.com/api.php?amount=5&type=multiple")
@@ -36,18 +52,13 @@ function App() {
                 setQuestions(
                     data.results.map((question: questionsData) => {
                         return {
-                            question: question.question
-                                .replace(/&quot;/g, '"')
-                                .replace(/&#039;/g, "'")
-                                .replace(/&amp;/g, "&")
-                                .replace(/&lt;/g, "<")
-                                .replace(/&gt;/g, ">")
-                                .replace(/&#x27;/g, "'")
-                                .replace(/&#x2F;/g, "/"),
-                            answers: question.incorrect_answers.concat(
+                            question: fixFormatting(question.question),
+                            answers: fixFormattingArray(
+                                question.incorrect_answers
+                            ).concat(fixFormatting(question.correct_answer)),
+                            correctAnswer: fixFormatting(
                                 question.correct_answer
                             ),
-                            correctAnswer: question.correct_answer,
                         };
                     })
                 );

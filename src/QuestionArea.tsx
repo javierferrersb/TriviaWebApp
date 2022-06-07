@@ -5,10 +5,10 @@ import { question } from "./libs/QuestionTypes";
 
 interface QuestionAreaProps {
     questionData: question;
+    setUserAnswer: (answer: string) => void;
 }
 function QuestionArea(props: QuestionAreaProps) {
     const letterArray: string[] = ["A", "B", "C", "D"];
-    const [selectedOption, setSelectedOption] = React.useState<string>("");
     const [isSelected, setIsSelected] = React.useState<Array<Boolean>>([
         false,
         false,
@@ -16,6 +16,9 @@ function QuestionArea(props: QuestionAreaProps) {
         false,
     ]);
 
+    React.useEffect(() => {
+        setIsSelected([false, false, false, false]);
+    }, [props.questionData]);
     const options: Array<JSX.Element> = props.questionData.answers.map(
         (answer: string, index: number) => {
             return (
@@ -26,7 +29,7 @@ function QuestionArea(props: QuestionAreaProps) {
                     isSelected={isSelected[index] === true}
                     letter={letterArray[index]}
                     onClick={() => {
-                        setSelectedOption(answer);
+                        props.setUserAnswer(answer);
                         setIsSelected((prevValue: Array<Boolean>) => {
                             return prevValue.map(
                                 (value: Boolean, i: number) => {
