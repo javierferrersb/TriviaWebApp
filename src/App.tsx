@@ -42,7 +42,6 @@ function App() {
 
     function nextQuestion(previousAnswer: string): void {
         questions[currentQuestion].userAnswer = previousAnswer;
-        console.log(questions[currentQuestion].correctAnswer);
         if (currentQuestion < questions.length - 1) {
             setCurrentQuestion((prevValue: number) => {
                 return prevValue + 1;
