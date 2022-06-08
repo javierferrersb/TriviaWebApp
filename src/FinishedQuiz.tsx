@@ -25,12 +25,6 @@ function FinishedQuiz(props: FinishedQuizProps) {
         <div className="finished-quiz-view">
             {viewQuestions ? (
                 <div className="answer-view">
-                    <button
-                        className="replay-button-questions"
-                        onClick={props.replayQuizHandler}
-                    >
-                        Play again
-                    </button>
                     <QuestionArea
                         questionData={props.questionData}
                         setUserAnswer={(answer: string) => {}}
@@ -48,6 +42,12 @@ function FinishedQuiz(props: FinishedQuizProps) {
                         IsFinished={true}
                         previousQuestionHandler={props.previousQuestionHandler}
                     />
+                    <button
+                        className="replay-button-questions"
+                        onClick={props.replayQuizHandler}
+                    >
+                        Play again
+                    </button>
                 </div>
             ) : (
                 <CongratulationsBanner
