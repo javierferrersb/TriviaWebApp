@@ -10,7 +10,7 @@
     align-items: center;
 }
 .banner-title {
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
@@ -19,7 +19,7 @@
     color: #01006e;
 }
 .banner-subtitle {
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -35,7 +35,7 @@
     color: #4c50c4;
     border: none;
 
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -62,7 +62,7 @@
     color: #fffbff;
     border: none;
 
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;

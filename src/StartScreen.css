@@ -10,7 +10,7 @@
     align-items: center;
 }
 .title {
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
@@ -26,7 +26,7 @@
     color: #4c50c4;
     border: none;
 
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
