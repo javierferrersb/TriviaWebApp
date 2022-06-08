@@ -24,7 +24,7 @@ function FinishedQuiz(props: FinishedQuizProps) {
     return (
         <div className="finished-quiz-view">
             {viewQuestions ? (
-                <div>
+                <div className="answer-view">
                     <button
                         className="replay-button-questions"
                         onClick={props.replayQuizHandler}

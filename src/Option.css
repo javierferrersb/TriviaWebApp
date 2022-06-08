@@ -3,7 +3,7 @@
     height: 75px;
 
     background: #fffbff;
-    border-radius: 8px;
+    border-radius: 16px;
 
     display: flex;
     flex-direction: row;
@@ -84,4 +84,17 @@
     color: #fffbff;
 }
 @media only screen and (max-width: 600px) {
+    .question-option {
+        width: 90vw;
+    }
+    .option-text {
+        font-size: 18px;
+        margin-left: 15px;
+    }
+    .option-letter {
+        font-size: 18px;
+        margin-left: 15px;
+        height: 35px;
+        width: 35px;
+    }
 }

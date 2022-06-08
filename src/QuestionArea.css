@@ -31,5 +31,11 @@
 @media only screen and (max-width: 600px) {
     .question-area {
         margin-bottom: 125px;
+        margin-top: 35px;
+    }
+    .question-text {
+        font-size: 24px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
