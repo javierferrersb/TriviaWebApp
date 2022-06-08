@@ -4,6 +4,7 @@ import "./CongratulationsBanner.css";
 interface CongratulationsBannerProps {
     correctQuestions: number;
     totalQuestions: number;
+    viewQuestions: () => void;
 }
 
 function CongratulationsBanner(props: CongratulationsBannerProps) {
@@ -14,7 +15,9 @@ function CongratulationsBanner(props: CongratulationsBannerProps) {
                 You got {props.correctQuestions} out of {props.totalQuestions}{" "}
                 questions right
             </p>
-            <button className="review-button">Review answers</button>
+            <button className="review-button" onClick={props.viewQuestions}>
+                Review answers
+            </button>
         </div>
     );
 }

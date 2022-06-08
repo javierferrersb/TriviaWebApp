@@ -14,22 +14,33 @@ interface FinishedQuizProps {
 }
 
 function FinishedQuiz(props: FinishedQuizProps) {
+    const [viewQuestions, setViewQuestions] = React.useState<boolean>(false);
+
+    function handleViewQuestions() {
+        setViewQuestions(true);
+    }
     return (
         <div className="finished-quiz-view">
-            <CongratulationsBanner
-                totalQuestions={props.totalQuestions}
-                correctQuestions={props.correctQuestions}
-            />
-            {/* <BottomBar
-                currentQuestion={props.currentQuestion}
-                IsEnabled={props.currentQuestion + 1 !== props.totalQuestions}
-                totalQuestions={props.totalQuestions}
-                nextQuestionHandler={() => {
-                    props.nextQuestionHandler("");
-                }}
-                IsFinished={true}
-                previousQuestionHandler={props.previousQuestionHandler}
-            /> */}
+            {viewQuestions ? (
+                <BottomBar
+                    currentQuestion={props.currentQuestion}
+                    IsEnabled={
+                        props.currentQuestion + 1 !== props.totalQuestions
+                    }
+                    totalQuestions={props.totalQuestions}
+                    nextQuestionHandler={() => {
+                        props.nextQuestionHandler("");
+                    }}
+                    IsFinished={true}
+                    previousQuestionHandler={props.previousQuestionHandler}
+                />
+            ) : (
+                <CongratulationsBanner
+                    totalQuestions={props.totalQuestions}
+                    correctQuestions={props.correctQuestions}
+                    viewQuestions={handleViewQuestions}
+                />
+            )}
         </div>
     );
 }
