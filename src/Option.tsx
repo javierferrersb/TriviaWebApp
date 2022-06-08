@@ -7,10 +7,17 @@ interface OptionProps {
     letter: string;
     isSelected: boolean;
     onClick: () => void;
+    IsCorrect: boolean;
+    IsIncorrect: boolean;
 }
 function Option(props: OptionProps) {
     let className: string =
         "question-option" + (props.isSelected ? " active" : "");
+    if (props.IsCorrect) {
+        className += " correct";
+    } else if (props.IsIncorrect) {
+        className += " incorrect";
+    }
     return (
         <div className={className} onClick={props.onClick}>
             <div className="option-letter">{props.letter}</div>

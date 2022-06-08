@@ -16,6 +16,7 @@ function QuestionView(props: QuestionViewProps) {
     React.useEffect(() => {
         setSelectedOption("");
     }, [props.questionData]);
+
     return (
         <div className="question-view">
             <QuestionArea
@@ -23,6 +24,7 @@ function QuestionView(props: QuestionViewProps) {
                 setUserAnswer={(answer: string) => {
                     setSelectedOption(answer);
                 }}
+                IsFinished={false}
             />
             <BottomBar
                 currentQuestion={props.currentQuestion}

@@ -25,6 +25,13 @@
 .question-option.active {
     background: #01006e;
 }
+
+.question-option.correct {
+    background: #456726;
+}
+.question-option.incorrect {
+    background: #ba1b1b;
+}
 .option-letter {
     height: 40px;
     width: 40px;
@@ -48,6 +55,14 @@
     background: #fffbff;
     color: #060710;
 }
+.question-option.correct > .option-letter {
+    background: #fffbff;
+    color: #060710;
+}
+.question-option.incorrect > .option-letter {
+    background: #fffbff;
+    color: #060710;
+}
 .option-text {
     margin-left: 40px;
 
@@ -60,6 +75,12 @@
     color: #060710;
 }
 .question-option.active > .option-text {
+    color: #fffbff;
+}
+.question-option.correct > .option-text {
+    color: #fffbff;
+}
+.question-option.incorrect > .option-text {
     color: #fffbff;
 }
 @media only screen and (max-width: 600px) {

@@ -6,6 +6,7 @@ import { question } from "./libs/QuestionTypes";
 interface QuestionAreaProps {
     questionData: question;
     setUserAnswer: (answer: string) => void;
+    IsFinished: boolean;
 }
 function QuestionArea(props: QuestionAreaProps) {
     const letterArray: string[] = ["A", "B", "C", "D"];
@@ -27,17 +28,34 @@ function QuestionArea(props: QuestionAreaProps) {
                     id={index}
                     text={answer}
                     isSelected={isSelected[index] === true}
+                    IsCorrect={
+                        (props.IsFinished &&
+                            answer !== props.questionData.userAnswer &&
+                            answer === props.questionData.correctAnswer) ||
+                        (answer === props.questionData.userAnswer &&
+                            answer === props.questionData.correctAnswer)
+                    }
+                    IsIncorrect={
+                        props.IsFinished &&
+                        answer === props.questionData.userAnswer &&
+                        props.questionData.userAnswer !==
+                            props.questionData.correctAnswer
+                    }
                     letter={letterArray[index]}
-                    onClick={() => {
-                        props.setUserAnswer(answer);
-                        setIsSelected((prevValue: Array<Boolean>) => {
-                            return prevValue.map(
-                                (value: Boolean, i: number) => {
-                                    return i === index ? true : false;
-                                }
-                            );
-                        });
-                    }}
+                    onClick={
+                        !props.IsFinished
+                            ? () => {
+                                  props.setUserAnswer(answer);
+                                  setIsSelected((prevValue: Array<Boolean>) => {
+                                      return prevValue.map(
+                                          (value: Boolean, i: number) => {
+                                              return i === index ? true : false;
+                                          }
+                                      );
+                                  });
+                              }
+                            : () => {}
+                    }
                 />
             );
         }

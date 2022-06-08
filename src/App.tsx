@@ -43,7 +43,9 @@ function App() {
     }
 
     function nextQuestion(previousAnswer: string): void {
-        questions[currentQuestion].userAnswer = previousAnswer;
+        if (!quizEnded) {
+            questions[currentQuestion].userAnswer = previousAnswer;
+        }
         if (currentQuestion < questions.length - 1) {
             setCurrentQuestion((prevValue: number) => {
                 return prevValue + 1;
@@ -88,18 +90,7 @@ function App() {
         }, 0);
     }
 
-    /* return appStarted ? (
-        <QuestionView
-            currentQuestion={currentQuestion}
-            totalQuestions={questions.length}
-            questionData={questions[currentQuestion]}
-            nextQuestionHandler={nextQuestion}
-        />
-    ) : (
-        <StartScreen startQuizHandler={startApp} />
-    ); */
-    startApp();
-    return (
+    return quizEnded ? (
         <FinishedQuiz
             currentQuestion={currentQuestion}
             totalQuestions={questions.length}
@@ -108,6 +99,15 @@ function App() {
             previousQuestionHandler={previousQuestion}
             correctQuestions={getScore()}
         />
+    ) : appStarted ? (
+        <QuestionView
+            currentQuestion={currentQuestion}
+            totalQuestions={questions.length}
+            questionData={questions[currentQuestion]}
+            nextQuestionHandler={nextQuestion}
+        />
+    ) : (
+        <StartScreen startQuizHandler={startApp} />
     );
 }
 

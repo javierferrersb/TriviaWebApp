@@ -3,6 +3,7 @@ import BottomBar from "./BottomBar";
 import CongratulationsBanner from "./CongratulationsBanner";
 import "./FinishedQuiz.css";
 import { question } from "./libs/QuestionTypes";
+import QuestionArea from "./QuestionArea";
 
 interface FinishedQuizProps {
     currentQuestion: number;
@@ -22,18 +23,25 @@ function FinishedQuiz(props: FinishedQuizProps) {
     return (
         <div className="finished-quiz-view">
             {viewQuestions ? (
-                <BottomBar
-                    currentQuestion={props.currentQuestion}
-                    IsEnabled={
-                        props.currentQuestion + 1 !== props.totalQuestions
-                    }
-                    totalQuestions={props.totalQuestions}
-                    nextQuestionHandler={() => {
-                        props.nextQuestionHandler("");
-                    }}
-                    IsFinished={true}
-                    previousQuestionHandler={props.previousQuestionHandler}
-                />
+                <div>
+                    <QuestionArea
+                        questionData={props.questionData}
+                        setUserAnswer={(answer: string) => {}}
+                        IsFinished={true}
+                    />
+                    <BottomBar
+                        currentQuestion={props.currentQuestion}
+                        IsEnabled={
+                            props.currentQuestion + 1 !== props.totalQuestions
+                        }
+                        totalQuestions={props.totalQuestions}
+                        nextQuestionHandler={() => {
+                            props.nextQuestionHandler("");
+                        }}
+                        IsFinished={true}
+                        previousQuestionHandler={props.previousQuestionHandler}
+                    />
+                </div>
             ) : (
                 <CongratulationsBanner
                     totalQuestions={props.totalQuestions}

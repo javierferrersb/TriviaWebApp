@@ -13,13 +13,15 @@ interface BottomBarProps {
 function BottomBar(props: BottomBarProps) {
     return (
         <div className="bottom-bar">
-            <button
-                disabled={props.currentQuestion === 0}
-                className="next-button"
-                onClick={props.previousQuestionHandler}
-            >
-                PREVIOUS
-            </button>
+            {props.IsFinished && (
+                <button
+                    disabled={props.currentQuestion === 0}
+                    className="next-button"
+                    onClick={props.previousQuestionHandler}
+                >
+                    PREVIOUS
+                </button>
+            )}
             <div className="progress-area">
                 <div className="progress-indicator">
                     <div
@@ -40,7 +42,7 @@ function BottomBar(props: BottomBarProps) {
             <button
                 disabled={
                     !props.IsFinished
-                        ? (props.IsEnabled as boolean)
+                        ? (!props.IsEnabled as boolean)
                         : props.currentQuestion + 1 === props.totalQuestions
                         ? true
                         : false
