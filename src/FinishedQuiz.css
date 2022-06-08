@@ -1,0 +1,24 @@
+.replay-button-questions {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 20px;
+
+    border-radius: 15px;
+    width: 190px;
+    height: 52px;
+    background: #01006e;
+    color: #fffbff;
+    border: none;
+
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+
+    margin-top: 20px;
+
+    cursor: pointer;
+
+    transition: box-shadow 0.2s ease-in-out;
+}
