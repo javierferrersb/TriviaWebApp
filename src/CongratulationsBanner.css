@@ -53,3 +53,30 @@
 .review-button:active {
     background: #f4f3f6;
 }
+
+.replay-button {
+    border-radius: 15px;
+    width: 190px;
+    height: 52px;
+    background: #01006e;
+    color: #fffbff;
+    border: none;
+
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+
+    margin-top: 20px;
+
+    cursor: pointer;
+
+    transition: box-shadow 0.2s ease-in-out;
+}
+.replay-button:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.replay-button:active {
+    background: #000000;
+}

@@ -18,6 +18,9 @@ function CongratulationsBanner(props: CongratulationsBannerProps) {
             <button className="review-button" onClick={props.viewQuestions}>
                 Review answers
             </button>
+            <button className="replay-button" onClick={props.viewQuestions}>
+                Play again
+            </button>
         </div>
     );
 }
