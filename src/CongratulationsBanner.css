@@ -1,0 +1,55 @@
+.congratulations-banner {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.banner-title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 125%;
+    text-align: center;
+    color: #01006e;
+}
+.banner-subtitle {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 125%;
+    text-align: center;
+    color: #1b1b1f;
+}
+.review-button {
+    background: #fffbff;
+    border-radius: 15px;
+    width: 190px;
+    height: 52px;
+    color: #4c50c4;
+    border: none;
+
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+
+    margin-top: 20px;
+
+    cursor: pointer;
+
+    transition: box-shadow 0.2s ease-in-out;
+}
+.review-button:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.review-button:active {
+    background: #f4f3f6;
+}

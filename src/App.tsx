@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import FinishedQuiz from "./FinishedQuiz";
-import { questionArray } from "./libs/QuestionTypes";
+import { question, questionArray } from "./libs/QuestionTypes";
 import QuestionView from "./QuestionView";
 import StartScreen from "./StartScreen";
 
@@ -50,6 +50,7 @@ function App() {
             });
         } else {
             setQuizEnded(true);
+
             setCurrentQuestion(0);
         }
     }
@@ -77,6 +78,16 @@ function App() {
             .replace(/&#x2F;/g, "/");
     }
 
+    function getScore(): number {
+        return questions.reduce((score: number, aquestion: question) => {
+            if (aquestion.userAnswer === aquestion.correctAnswer) {
+                return score + 1;
+            } else {
+                return score;
+            }
+        }, 0);
+    }
+
     /* return appStarted ? (
         <QuestionView
             currentQuestion={currentQuestion}
@@ -95,6 +106,7 @@ function App() {
             questionData={questions[currentQuestion]}
             nextQuestionHandler={nextQuestion}
             previousQuestionHandler={previousQuestion}
+            correctQuestions={getScore()}
         />
     );
 }
