@@ -90,6 +90,12 @@ function App() {
         }, 0);
     }
 
+    function replay(): void {
+        setQuizEnded(false);
+        setCurrentQuestion(0);
+        setAppStarted(false);
+    }
+
     return quizEnded ? (
         <FinishedQuiz
             currentQuestion={currentQuestion}
@@ -98,6 +104,7 @@ function App() {
             nextQuestionHandler={nextQuestion}
             previousQuestionHandler={previousQuestion}
             correctQuestions={getScore()}
+            replayQuizHandler={replay}
         />
     ) : appStarted ? (
         <QuestionView

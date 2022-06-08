@@ -12,6 +12,7 @@ interface FinishedQuizProps {
     correctQuestions: number;
     nextQuestionHandler: (answer: string) => void;
     previousQuestionHandler: () => void;
+    replayQuizHandler: () => void;
 }
 
 function FinishedQuiz(props: FinishedQuizProps) {
@@ -47,6 +48,7 @@ function FinishedQuiz(props: FinishedQuizProps) {
                     totalQuestions={props.totalQuestions}
                     correctQuestions={props.correctQuestions}
                     viewQuestions={handleViewQuestions}
+                    replay={props.replayQuizHandler}
                 />
             )}
         </div>

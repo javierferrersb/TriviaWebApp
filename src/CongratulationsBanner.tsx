@@ -5,6 +5,7 @@ interface CongratulationsBannerProps {
     correctQuestions: number;
     totalQuestions: number;
     viewQuestions: () => void;
+    replay: () => void;
 }
 
 function CongratulationsBanner(props: CongratulationsBannerProps) {
@@ -18,7 +19,7 @@ function CongratulationsBanner(props: CongratulationsBannerProps) {
             <button className="review-button" onClick={props.viewQuestions}>
                 Review answers
             </button>
-            <button className="replay-button" onClick={props.viewQuestions}>
+            <button className="replay-button" onClick={props.replay}>
                 Play again
             </button>
         </div>
