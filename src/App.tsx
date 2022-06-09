@@ -10,6 +10,7 @@ function App() {
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
     const [questions, setQuestions] = React.useState<questionArray>([]);
     const [quizEnded, setQuizEnded] = React.useState(false);
+    const [topic, setTopic] = React.useState(-1);
     interface questionsData {
         category: string;
         type: string;
@@ -19,8 +20,12 @@ function App() {
         incorrect_answers: string[];
     }
 
-    function startApp(): void {
-        fetch("https://opentdb.com/api.php?amount=5&type=multiple")
+    function startApp(topicId: number): void {
+        setTopic(topicId);
+        fetch(
+            "https://opentdb.com/api.php?amount=5&type=multiple" +
+                (topicId !== -1 ? "&category=" + topicId : "")
+        )
             .then((response) => response.json())
             .then((data) => {
                 setQuestions(
@@ -114,7 +119,7 @@ function App() {
             nextQuestionHandler={nextQuestion}
         />
     ) : (
-        <StartScreen startQuizHandler={startApp} />
+        <StartScreen startQuizHandler={startApp} topic={topic} />
     );
 }
 

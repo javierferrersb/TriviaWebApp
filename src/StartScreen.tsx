@@ -3,7 +3,8 @@ import { category } from "./libs/QuestionTypes";
 import "./StartScreen.css";
 
 interface StartScreenProps {
-    startQuizHandler: () => void;
+    startQuizHandler: (topic: number) => void;
+    topic: number;
 }
 
 function StartScreen(props: StartScreenProps) {
@@ -11,6 +12,9 @@ function StartScreen(props: StartScreenProps) {
     const [topicsRetreived, setTopicsRetreived] =
         React.useState<boolean>(false);
     const [topics, setTopics] = React.useState<Array<JSX.Element>>([]);
+    const [selectedTopic, setSelectedTopic] = React.useState<number>(
+        props.topic
+    );
     React.useEffect(() => {
         if (!loadingStarted) {
             fetch("https://opentdb.com/api_category.php")
@@ -31,7 +35,7 @@ function StartScreen(props: StartScreenProps) {
     });
     function start(): void {
         setLoadingStarted(true);
-        props.startQuizHandler();
+        props.startQuizHandler(selectedTopic);
     }
     return (
         <div>
@@ -40,7 +44,13 @@ function StartScreen(props: StartScreenProps) {
                     <h1 className="title">Trivia App</h1>
                     {topicsRetreived ? (
                         <div className="select-wrapper">
-                            <select className="topic-select">
+                            <select
+                                className="topic-select"
+                                value={selectedTopic}
+                                onChange={(e) => {
+                                    setSelectedTopic(Number(e.target.value));
+                                }}
+                            >
                                 <option value="-1">All topics</option>
                                 {topics}
                             </select>
