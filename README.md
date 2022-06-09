@@ -1,46 +1,104 @@
-# Getting Started with Create React App
+<div id="top"></div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br />
+<div align="center">
+  <a href="https://github.com/javierferrersb/TriviaWebApp">
+    <img src="https://user-images.githubusercontent.com/84251991/172906766-bc81f7dd-3040-4ae4-89b9-f74b0640f35a.png" alt="Logo" width="192" height="192">
+  </a>
 
-## Available Scripts
+<h3 align="center">Trivia WebApp</h3>
 
-In the project directory, you can run:
+  <p align="center">
+    Simple trivia webapp made using React and Typescript
+  </p>
+</div>
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#additional-screenshots">Additional Screenshots</a></li>
+  </ol>
+</details>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## About The Project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Trivia WebApp Screen Shot](https://user-images.githubusercontent.com/84251991/172907106-e5d091d1-982e-4dd1-9a18-180f9f9d6a3b.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+>Done as a part of the `Learn React` tutorial from [Scrimba.com](https://scrimba.com/learn/learnreact/).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Trivia WebApp is a simple trivia game which pulls questions from the [OpenTriviaDB](https://opentdb.com/). It has the following features:
+- Answer questions
+- View results
+- Get score
+- See a specific category or all categories
 
-### `npm run eject`
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Built With
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* [ReactJS](https://reactjs.org/)
+* [TypeScript](https://www.typescriptlang.org/)
 
-## Learn More
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+* Node
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/javierferrersb/TriviaWebApp.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Run the application
+   ```sh
+   npm start
+   ```
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+## Additional Screenshots
+
+![Start Screen](https://user-images.githubusercontent.com/84251991/172958173-4d15468e-45fa-4447-b3bc-d2ed814ce499.png)
+![Viewing a question](https://user-images.githubusercontent.com/84251991/172958288-610a9803-28ab-4943-9c6d-297b40e4cd06.png)
+![Answering a question](https://user-images.githubusercontent.com/84251991/172958224-1479b109-5e15-4bf1-b0fc-309deb2be806.png)
+![Quiz results](https://user-images.githubusercontent.com/84251991/172958445-35896eb5-1516-43b9-b190-6ca5df02cd29.png)
+![Viewing answers](https://user-images.githubusercontent.com/84251991/172958579-9e3f66ff-8812-4f41-966e-98c16c8b4043.png)
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
