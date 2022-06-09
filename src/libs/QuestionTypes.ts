@@ -7,4 +7,9 @@ interface question {
 
 interface questionArray extends Array<question> {}
 
-export type { question, questionArray };
+interface category {
+    name: string;
+    id: number;
+}
+
+export type { question, questionArray, category };
