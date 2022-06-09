@@ -23,7 +23,7 @@ function App() {
     function startApp(topicId: number): void {
         setTopic(topicId);
         fetch(
-            "https://opentdb.com/api.php?amount=5&type=multiple" +
+            "https://opentdb.com/api.php?amount=5&type=multiple&encode=base64" +
                 (topicId !== -1 ? "&category=" + topicId : "")
         )
             .then((response) => response.json())
@@ -31,20 +31,27 @@ function App() {
                 setQuestions(
                     data.results.map((question: questionsData) => {
                         return {
-                            question: fixFormatting(question.question),
-                            answers: fixFormattingArray(
-                                question.incorrect_answers
-                            )
-                                .concat(fixFormatting(question.correct_answer))
-                                .sort((a, b) => 0.5 - Math.random()),
-                            correctAnswer: fixFormatting(
-                                question.correct_answer
-                            ),
+                            question: decode(question.question),
+                            answers: decodeString(question.incorrect_answers)
+                                .concat(decode(question.correct_answer))
+                                .sort(
+                                    (a: string, b: string) =>
+                                        0.5 - Math.random()
+                                ),
+                            correctAnswer: decode(question.correct_answer),
                         };
                     })
                 );
                 setAppStarted(true);
             });
+    }
+
+    function decode(str: string): string {
+        return decodeURIComponent(escape(window.atob(str)));
+    }
+
+    function decodeString(arr: string[]): string[] {
+        return arr.map((str) => decode(str));
     }
 
     function nextQuestion(previousAnswer: string): void {
@@ -67,22 +74,6 @@ function App() {
                 return prevValue - 1;
             });
         }
-    }
-    function fixFormattingArray(originalStrings: string[]): string[] {
-        return originalStrings.map((originalString: string) => {
-            return fixFormatting(originalString);
-        });
-    }
-
-    function fixFormatting(originalString: string): string {
-        return originalString
-            .replace(/&quot;/g, '"')
-            .replace(/&#039;/g, "'")
-            .replace(/&amp;/g, "&")
-            .replace(/&lt;/g, "<")
-            .replace(/&gt;/g, ">")
-            .replace(/&#x27;/g, "'")
-            .replace(/&#x2F;/g, "/");
     }
 
     function getScore(): number {
