@@ -22,12 +22,15 @@
 
     transition: box-shadow 0.2s ease-in-out;
 }
-.replay-button-questions:hover {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
 
 .replay-button-questions:active {
     background: #000000;
+}
+
+@media (hover: hover) {
+    .replay-button-questions:hover {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
 }
 
 @media screen and (max-width: 600px) {

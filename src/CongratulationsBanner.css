@@ -46,9 +46,6 @@
 
     transition: box-shadow 0.2s ease-in-out;
 }
-.review-button:hover {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
 
 .review-button:active {
     background: #f4f3f6;
@@ -73,10 +70,15 @@
 
     transition: box-shadow 0.2s ease-in-out;
 }
-.replay-button:hover {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
 
 .replay-button:active {
     background: #000000;
+}
+@media (hover: hover) {
+    .review-button:hover {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+    .replay-button:hover {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
 }
