@@ -35,6 +35,14 @@
 
     transition: box-shadow 0.2s ease-in-out;
 }
+
+.start-button:disabled {
+    background: #f4f3f6;
+    cursor: not-allowed;
+}
+.start-button:disabled:hover {
+    box-shadow: none;
+}
 .start-button:hover {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }

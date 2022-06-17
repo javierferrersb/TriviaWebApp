@@ -63,7 +63,11 @@ function StartScreen(props: StartScreenProps) {
                             <div></div>
                         </div>
                     )}
-                    <button className="start-button" onClick={start}>
+                    <button
+                        className="start-button"
+                        onClick={start}
+                        disabled={!topicsRetreived}
+                    >
                         Start quiz
                     </button>
                 </div>
