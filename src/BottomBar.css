@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
+    border-radius: 16px 16px 0px 0px;
 }
 .progress-area {
     display: flex;
