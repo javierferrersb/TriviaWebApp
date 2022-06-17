@@ -45,19 +45,20 @@
 
 .select-wrapper {
     position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .select-wrapper::after {
+    pointer-events: none;
     content: "▼";
     font-size: 1rem;
-    top: 31px;
+    top: 12px;
     right: 10px;
     color: #4c50c4;
     position: absolute;
 }
 select {
-    margin-top: 20px;
-    margin-bottom: 20px;
     padding-left: 10px;
     padding-right: 10px;
     height: 40px;
