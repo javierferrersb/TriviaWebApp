@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import ErrorMessage from "./ErrorMessage";
 import FinishedQuiz from "./FinishedQuiz";
 import { question, questionArray } from "./libs/QuestionTypes";
 import QuestionView from "./QuestionView";
@@ -11,6 +12,7 @@ function App() {
     const [questions, setQuestions] = React.useState<questionArray>([]);
     const [quizEnded, setQuizEnded] = React.useState(false);
     const [topic, setTopic] = React.useState(-1);
+    const [error, setError] = React.useState(false);
     interface questionsData {
         category: string;
         type: string;
@@ -43,6 +45,9 @@ function App() {
                     })
                 );
                 setAppStarted(true);
+            })
+            .catch((error) => {
+                setError(true);
             });
     }
 
@@ -92,7 +97,9 @@ function App() {
         setAppStarted(false);
     }
 
-    return quizEnded ? (
+    return error ? (
+        <ErrorMessage />
+    ) : quizEnded ? (
         <FinishedQuiz
             currentQuestion={currentQuestion}
             totalQuestions={questions.length}
