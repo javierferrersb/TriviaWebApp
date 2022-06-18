@@ -1,5 +1,5 @@
-import React from "react";
 import "./AboutScreen.css";
+import Logo from "./images/logo.png";
 
 interface AboutScreenProps {
     backFunction: () => void;
@@ -11,6 +11,8 @@ function AboutScreen(props: AboutScreenProps) {
             <button className="back-button" onClick={props.backFunction}>
                 BACK
             </button>
+            <img src={Logo} alt="logo" className="logo" />
+
             <div className="about-message-area">
                 <h1 className="about-message-title">Trivia App</h1>
                 <p className="about-message-text">

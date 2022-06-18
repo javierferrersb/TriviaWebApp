@@ -2,6 +2,7 @@ import React from "react";
 import AboutScreen from "./AboutScreen";
 import { category } from "./libs/QuestionTypes";
 import "./StartScreen.css";
+import Logo from "./images/logo.png";
 
 interface StartScreenProps {
     startQuizHandler: (topic: number) => void;
@@ -57,6 +58,7 @@ function StartScreen(props: StartScreenProps) {
                     >
                         🛈
                     </button>
+                    <img src={Logo} alt="logo" className="logo" />
                     <h1 className="title">Trivia App</h1>
                     {topicsRetreived ? (
                         <div className="select-wrapper">

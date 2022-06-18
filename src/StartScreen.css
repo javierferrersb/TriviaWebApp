@@ -39,6 +39,13 @@
     transition: box-shadow 0.2s ease-in-out;
 }
 
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
 .info-button:active {
     background-color: #565e71;
 }
