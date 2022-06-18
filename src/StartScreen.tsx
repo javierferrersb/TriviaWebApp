@@ -1,4 +1,5 @@
 import React from "react";
+import AboutScreen from "./AboutScreen";
 import { category } from "./libs/QuestionTypes";
 import "./StartScreen.css";
 
@@ -9,6 +10,7 @@ interface StartScreenProps {
 
 function StartScreen(props: StartScreenProps) {
     const [loadingStarted, setLoadingStarted] = React.useState<boolean>(false);
+    const [showInfo, setShowInfo] = React.useState<boolean>(false);
     const [topicsRetreived, setTopicsRetreived] =
         React.useState<boolean>(false);
     const [topics, setTopics] = React.useState<Array<JSX.Element>>([]);
@@ -39,8 +41,22 @@ function StartScreen(props: StartScreenProps) {
     }
     return (
         <div>
-            {!loadingStarted ? (
+            {showInfo ? (
+                <AboutScreen
+                    backFunction={() => {
+                        setShowInfo(false);
+                    }}
+                />
+            ) : !loadingStarted ? (
                 <div className="start-screen">
+                    <button
+                        className="info-button"
+                        onClick={() => {
+                            setShowInfo(true);
+                        }}
+                    >
+                        🛈
+                    </button>
                     <h1 className="title">Trivia App</h1>
                     {topicsRetreived ? (
                         <div className="select-wrapper">
