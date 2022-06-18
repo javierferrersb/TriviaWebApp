@@ -9,6 +9,7 @@ interface OptionProps {
     onClick: () => void;
     IsCorrect: boolean;
     IsIncorrect: boolean;
+    IsReviewing: boolean;
 }
 function Option(props: OptionProps) {
     let className: string =
@@ -17,6 +18,9 @@ function Option(props: OptionProps) {
         className += " correct";
     } else if (props.IsIncorrect) {
         className += " incorrect";
+    }
+    if (props.IsReviewing) {
+        className += " reviewing";
     }
     return (
         <div className={className} onClick={props.onClick}>

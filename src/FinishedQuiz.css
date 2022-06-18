@@ -29,7 +29,7 @@
 
 @media (hover: hover) {
     .replay-button-questions:hover {
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.2);
     }
 }
 

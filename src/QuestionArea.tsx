@@ -24,6 +24,7 @@ function QuestionArea(props: QuestionAreaProps) {
         (answer: string, index: number) => {
             return (
                 <Option
+                    IsReviewing={props.IsFinished}
                     key={index}
                     id={index}
                     text={answer}
