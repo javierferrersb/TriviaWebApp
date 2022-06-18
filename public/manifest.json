@@ -694,5 +694,77 @@
     "start_url": ".",
     "display": "standalone",
     "theme_color": "#01006e",
-    "background_color": "#e4e1ec"
+    "background_color": "#e4e1ec",
+    "screenshots": [
+        {
+            "src": "public/screenshots/question-desktop.webp",
+            "sizes": "1920x1080",
+            "type": "image/webp",
+            "platform": "wide",
+            "label": "Question shown in Trivia App"
+        },
+        {
+            "src": "public/screenshots/answered-desktop.webp",
+            "sizes": "1920x1080",
+            "type": "image/webp",
+            "platform": "wide",
+            "label": "Question answered in Trivia App"
+        },
+        {
+            "src": "public/screenshots/finished-desktop.webp",
+            "sizes": "1920x1080",
+            "type": "image/webp",
+            "platform": "wide",
+            "label": "Quiz finished in Trivia App"
+        },
+        {
+            "src": "public/screenshots/result-desktop.webp",
+            "sizes": "1920x1080",
+            "type": "image/webp",
+            "platform": "wide",
+            "label": "Checking quiz results in Trivia App"
+        },
+        {
+            "src": "public/screenshots/start-desktop.webp",
+            "sizes": "1920x1080",
+            "type": "image/webp",
+            "platform": "wide",
+            "label": "Trivia App Start Screen"
+        },
+        {
+            "src": "public/screenshots/question-mobile.webp",
+            "sizes": "1920x1080",
+            "type": "image/webp",
+            "platform": "narrow",
+            "label": "Question shown in Trivia App"
+        },
+        {
+            "src": "public/screenshots/answered-mobile.webp",
+            "sizes": "1920x1080",
+            "type": "image/webp",
+            "platform": "narrow",
+            "label": "Question answered in Trivia App"
+        },
+        {
+            "src": "public/screenshots/finished-mobile.webp",
+            "sizes": "1920x1080",
+            "type": "image/webp",
+            "platform": "narrow",
+            "label": "Quiz finished in Trivia App"
+        },
+        {
+            "src": "public/screenshots/result-mobile.webp",
+            "sizes": "1920x1080",
+            "type": "image/webp",
+            "platform": "narrow",
+            "label": "Checking quiz results in Trivia App"
+        },
+        {
+            "src": "public/screenshots/start-mobile.webp",
+            "sizes": "1920x1080",
+            "type": "image/webp",
+            "platform": "narrow",
+            "label": "Trivia App Start Screen"
+        }
+    ]
 }
