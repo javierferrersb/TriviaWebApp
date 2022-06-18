@@ -1,6 +1,7 @@
 import React from "react";
 import "./CongratulationsBanner.css";
-
+import windowDimensions from "./windowDimensions";
+import Confetti from "react-confetti";
 interface CongratulationsBannerProps {
     correctQuestions: number;
     totalQuestions: number;
@@ -9,8 +10,13 @@ interface CongratulationsBannerProps {
 }
 
 function CongratulationsBanner(props: CongratulationsBannerProps) {
+    const { width, height } = windowDimensions();
+
     return (
         <div className="congratulations-banner">
+            {props.correctQuestions === props.totalQuestions && (
+                <Confetti width={width} height={height} opacity={0.6} />
+            )}
             <h1 className="banner-title">Quiz finished!</h1>
             <p className="banner-subtitle">
                 You got {props.correctQuestions} out of {props.totalQuestions}{" "}
