@@ -86,7 +86,7 @@ function StartScreen(props: StartScreenProps) {
                         onClick={start}
                         disabled={!topicsRetreived}
                     >
-                        Start quiz
+                        {topicsRetreived ? "Start quiz" : "Loading..."}
                     </button>
                 </div>
             ) : (
