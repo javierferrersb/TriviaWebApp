@@ -35,7 +35,7 @@ function StartScreen(props: StartScreenProps) {
                     setTopicsRetreived(true);
                 });
         }
-    });
+    }, [loadingStarted]);
     function start(): void {
         setLoadingStarted(true);
         props.startQuizHandler(selectedTopic);
