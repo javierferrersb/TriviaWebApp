@@ -25,18 +25,9 @@
 
     border-radius: 50%;
 
-    font-family: "Roboto", sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 24px;
-    line-height: 38px;
-    text-align: center;
-    background-color: #131b2c;
+    background-color: #fffbff;
+    color: #131b2c;
     border: none;
-
-    color: white;
-
-    transition: box-shadow 0.2s ease-in-out;
 }
 
 .logo {

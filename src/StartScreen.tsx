@@ -56,7 +56,7 @@ function StartScreen(props: StartScreenProps) {
                             setShowInfo(true);
                         }}
                     >
-                        🛈
+                        <span className="material-symbols-outlined">info</span>
                     </button>
                     <img src={Logo} alt="logo" className="logo" />
                     <h1 className="title">Trivia App</h1>
