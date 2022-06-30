@@ -12,9 +12,9 @@
     Simple trivia webapp made using React and Typescript
   </p>
 </div>
-
-
-
+<br>
+<div align="center"><a href="https://www.microsoft.com/store/productId/9PGP0K5FGXGZ" target="_blank" rel="noopener noreferrer"><img src="https://getbadgecdn.azureedge.net/images/English_L.png" alt="Get from Microsoft" width="300"></a></div>
+<br>
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
