@@ -12,7 +12,17 @@
     Simple trivia webapp made using React and Typescript
   </p>
 </div>
+<br>
 
+
+<div align="center">
+<a href="https://trivia.javierferrersb.dev/" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/84251991/177398863-4d3090ab-032f-4e45-aa6c-3e2e3112a248.png" alt="Visit Website" width="250"></a>
+<br>
+<br>
+<a href="https://www.microsoft.com/store/productId/9PGP0K5FGXGZ" target="_blank" rel="noopener noreferrer"><img src="https://getbadgecdn.azureedge.net/images/English_L.png" alt="Get from Microsoft" width="300"></a>
+<a href='https://play.google.com/store/apps/details?id=dev.javierferrersb.trivia&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' width="300"/></a>
+</div>
+<br>
 
 
 <!-- TABLE OF CONTENTS -->
