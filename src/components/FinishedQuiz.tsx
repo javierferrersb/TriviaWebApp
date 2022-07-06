@@ -1,8 +1,8 @@
 import React from "react";
 import BottomBar from "./BottomBar";
 import CongratulationsBanner from "./CongratulationsBanner";
-import "./FinishedQuiz.css";
-import { question } from "./libs/QuestionTypes";
+import "../styles/FinishedQuiz.css";
+import { question } from "../libs/QuestionTypes";
 import QuestionArea from "./QuestionArea";
 
 interface FinishedQuizProps {

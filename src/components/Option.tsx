@@ -1,5 +1,4 @@
-import React from "react";
-import "./Option.css";
+import "../styles/Option.css";
 
 interface OptionProps {
     text: string;

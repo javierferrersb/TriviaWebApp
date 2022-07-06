@@ -1,8 +1,8 @@
 import React from "react";
-import "./App.css";
+import "../styles/App.css";
 import ErrorMessage from "./ErrorMessage";
 import FinishedQuiz from "./FinishedQuiz";
-import { question, questionArray } from "./libs/QuestionTypes";
+import { question, questionArray } from "../libs/QuestionTypes";
 import QuestionView from "./QuestionView";
 import StartScreen from "./StartScreen";
 

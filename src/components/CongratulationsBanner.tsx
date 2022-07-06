@@ -1,6 +1,5 @@
-import React from "react";
-import "./CongratulationsBanner.css";
-import windowDimensions from "./windowDimensions";
+import "../styles/CongratulationsBanner.css";
+import windowDimensions from "../libs/windowDimensions";
 import Confetti from "react-confetti";
 interface CongratulationsBannerProps {
     correctQuestions: number;

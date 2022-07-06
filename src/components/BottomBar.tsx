@@ -1,5 +1,4 @@
-import React from "react";
-import "./BottomBar.css";
+import "../styles/BottomBar.css";
 
 interface BottomBarProps {
     currentQuestion: number;

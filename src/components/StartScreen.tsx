@@ -1,8 +1,8 @@
 import React from "react";
 import AboutScreen from "./AboutScreen";
-import { category } from "./libs/QuestionTypes";
-import "./StartScreen.css";
-import Logo from "./images/logo.png";
+import { category } from "../libs/QuestionTypes";
+import "../styles/StartScreen.css";
+import Logo from "../images/logo.png";
 
 interface StartScreenProps {
     startQuizHandler: (topic: number) => void;

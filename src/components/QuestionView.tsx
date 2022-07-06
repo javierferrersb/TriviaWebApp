@@ -1,6 +1,6 @@
 import React from "react";
-import "./QuestionView.css";
-import { question } from "./libs/QuestionTypes";
+import "../styles/QuestionView.css";
+import { question } from "../libs/QuestionTypes";
 import BottomBar from "./BottomBar";
 import QuestionArea from "./QuestionArea";
 

@@ -1,7 +1,7 @@
 import React from "react";
-import "./QuestionArea.css";
+import "../styles/QuestionArea.css";
 import Option from "./Option";
-import { question } from "./libs/QuestionTypes";
+import { question } from "../libs/QuestionTypes";
 
 interface QuestionAreaProps {
     questionData: question;

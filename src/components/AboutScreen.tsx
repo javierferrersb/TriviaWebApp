@@ -1,5 +1,5 @@
-import "./AboutScreen.css";
-import Logo from "./images/logo.png";
+import "../styles/AboutScreen.css";
+import Logo from "../images/logo.png";
 
 interface AboutScreenProps {
     backFunction: () => void;
