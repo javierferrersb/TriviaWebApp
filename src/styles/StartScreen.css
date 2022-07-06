@@ -28,6 +28,8 @@
     background-color: #fffbff;
     color: #131b2c;
     border: none;
+
+    transition: box-shadow 0.2s ease-in-out;
 }
 
 .logo {
@@ -39,6 +41,7 @@
 
 .info-button:active {
     background-color: #565e71;
+    color: white;
 }
 
 .title {
