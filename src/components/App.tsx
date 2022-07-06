@@ -5,6 +5,8 @@ import FinishedQuiz from "./FinishedQuiz";
 import { question, questionArray } from "../libs/QuestionTypes";
 import QuestionView from "./QuestionView";
 import StartScreen from "./StartScreen";
+import { Routes, Route } from "react-router-dom";
+import AboutScreen from "./AboutScreen";
 
 function App() {
     const [appStarted, setAppStarted] = React.useState(false);
@@ -97,27 +99,42 @@ function App() {
         setAppStarted(false);
     }
 
-    return error ? (
-        <ErrorMessage />
-    ) : quizEnded ? (
-        <FinishedQuiz
-            currentQuestion={currentQuestion}
-            totalQuestions={questions.length}
-            questionData={questions[currentQuestion]}
-            nextQuestionHandler={nextQuestion}
-            previousQuestionHandler={previousQuestion}
-            correctQuestions={getScore()}
-            replayQuizHandler={replay}
-        />
-    ) : appStarted ? (
-        <QuestionView
-            currentQuestion={currentQuestion}
-            totalQuestions={questions.length}
-            questionData={questions[currentQuestion]}
-            nextQuestionHandler={nextQuestion}
-        />
-    ) : (
-        <StartScreen startQuizHandler={startApp} topic={topic} />
+    return (
+        <div>
+            <Routes>
+                <Route
+                    path="*"
+                    element={
+                        error ? (
+                            <ErrorMessage />
+                        ) : quizEnded ? (
+                            <FinishedQuiz
+                                currentQuestion={currentQuestion}
+                                totalQuestions={questions.length}
+                                questionData={questions[currentQuestion]}
+                                nextQuestionHandler={nextQuestion}
+                                previousQuestionHandler={previousQuestion}
+                                correctQuestions={getScore()}
+                                replayQuizHandler={replay}
+                            />
+                        ) : appStarted ? (
+                            <QuestionView
+                                currentQuestion={currentQuestion}
+                                totalQuestions={questions.length}
+                                questionData={questions[currentQuestion]}
+                                nextQuestionHandler={nextQuestion}
+                            />
+                        ) : (
+                            <StartScreen
+                                startQuizHandler={startApp}
+                                topic={topic}
+                            />
+                        )
+                    }
+                />
+                <Route path="/about" element={<AboutScreen />} />
+            </Routes>
+        </div>
     );
 }
 

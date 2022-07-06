@@ -1,14 +1,18 @@
 import "../styles/AboutScreen.css";
 import Logo from "../images/logo.png";
+import { useNavigate } from "react-router-dom";
 
-interface AboutScreenProps {
-    backFunction: () => void;
-}
-
-function AboutScreen(props: AboutScreenProps) {
+function AboutScreen() {
+    const navigate = useNavigate();
     return (
         <div className="about-area">
-            <button className="back-button" onClick={props.backFunction}>
+            <button
+                className="back-button"
+                onClick={() => {
+                    navigate("/");
+                }}
+            >
+                {" "}
                 BACK
             </button>
             <img src={Logo} alt="logo" className="logo" />

@@ -3,6 +3,7 @@ import AboutScreen from "./AboutScreen";
 import { category } from "../libs/QuestionTypes";
 import "../styles/StartScreen.css";
 import Logo from "../images/logo.png";
+import { useNavigate } from "react-router-dom";
 
 interface StartScreenProps {
     startQuizHandler: (topic: number) => void;
@@ -11,13 +12,13 @@ interface StartScreenProps {
 
 function StartScreen(props: StartScreenProps) {
     const [loadingStarted, setLoadingStarted] = React.useState<boolean>(false);
-    const [showInfo, setShowInfo] = React.useState<boolean>(false);
     const [topicsRetreived, setTopicsRetreived] =
         React.useState<boolean>(false);
     const [topics, setTopics] = React.useState<Array<JSX.Element>>([]);
     const [selectedTopic, setSelectedTopic] = React.useState<number>(
         props.topic
     );
+    const navigate = useNavigate();
     React.useEffect(() => {
         if (!loadingStarted) {
             fetch("https://opentdb.com/api_category.php")
@@ -36,24 +37,20 @@ function StartScreen(props: StartScreenProps) {
                 });
         }
     }, [loadingStarted]);
+
     function start(): void {
         setLoadingStarted(true);
         props.startQuizHandler(selectedTopic);
     }
+
     return (
         <div>
-            {showInfo ? (
-                <AboutScreen
-                    backFunction={() => {
-                        setShowInfo(false);
-                    }}
-                />
-            ) : !loadingStarted ? (
+            {!loadingStarted ? (
                 <div className="start-screen">
                     <button
                         className="info-button"
                         onClick={() => {
-                            setShowInfo(true);
+                            navigate("/about");
                         }}
                     >
                         <span className="material-symbols-outlined">info</span>
