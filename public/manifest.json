@@ -1,5 +1,6 @@
 {
     "short_name": "Trivia App",
+    "description": "A trivia app for the web",
     "name": "Trivia App",
     "orientation": "portrait-primary",
     "icons": [
@@ -689,6 +690,12 @@
             "type": "image/png",
             "sizes": "1024x1024",
             "purpose": "any"
+        },
+        {
+            "src": "icons/maskable_icon_x512.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "maskable"
         }
     ],
     "screenshots": [
@@ -696,74 +703,224 @@
             "src": "images/question-desktop.png",
             "sizes": "1920x1080",
             "type": "image/png",
-            "platform": "wide",
+            "platform": "windows",
             "label": "Question shown in Trivia App"
         },
         {
             "src": "images/answered-desktop.png",
             "sizes": "1920x1080",
             "type": "image/png",
-            "platform": "wide",
+            "platform": "windows",
             "label": "Question answered in Trivia App"
         },
         {
             "src": "images/finished-desktop.png",
             "sizes": "1920x1080",
             "type": "image/png",
-            "platform": "wide",
+            "platform": "windows",
             "label": "Quiz finished in Trivia App"
         },
         {
             "src": "images/result-desktop.png",
             "sizes": "1920x1080",
             "type": "image/png",
-            "platform": "wide",
+            "platform": "windows",
             "label": "Checking quiz results in Trivia App"
         },
         {
             "src": "images/start-desktop.png",
             "sizes": "1920x1080",
             "type": "image/png",
-            "platform": "wide",
+            "platform": "windows",
+            "label": "Trivia App Start Screen"
+        },
+        {
+            "src": "images/question-desktop.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "platform": "xbox",
+            "label": "Question shown in Trivia App"
+        },
+        {
+            "src": "images/answered-desktop.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "platform": "xbox",
+            "label": "Question answered in Trivia App"
+        },
+        {
+            "src": "images/finished-desktop.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "platform": "xbox",
+            "label": "Quiz finished in Trivia App"
+        },
+        {
+            "src": "images/result-desktop.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "platform": "xbox",
+            "label": "Checking quiz results in Trivia App"
+        },
+        {
+            "src": "images/start-desktop.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "platform": "xbox",
+            "label": "Trivia App Start Screen"
+        },
+        {
+            "src": "images/question-desktop.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "platform": "chromeos",
+            "label": "Question shown in Trivia App"
+        },
+        {
+            "src": "images/answered-desktop.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "platform": "chromeos",
+            "label": "Question answered in Trivia App"
+        },
+        {
+            "src": "images/finished-desktop.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "platform": "chromeos",
+            "label": "Quiz finished in Trivia App"
+        },
+        {
+            "src": "images/result-desktop.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "platform": "chromeos",
+            "label": "Checking quiz results in Trivia App"
+        },
+        {
+            "src": "images/start-desktop.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "platform": "chromeos",
+            "label": "Trivia App Start Screen"
+        },
+        {
+            "src": "images/question-desktop.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "platform": "macos",
+            "label": "Question shown in Trivia App"
+        },
+        {
+            "src": "images/answered-desktop.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "platform": "macos",
+            "label": "Question answered in Trivia App"
+        },
+        {
+            "src": "images/finished-desktop.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "platform": "macos",
+            "label": "Quiz finished in Trivia App"
+        },
+        {
+            "src": "images/result-desktop.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "platform": "macos",
+            "label": "Checking quiz results in Trivia App"
+        },
+        {
+            "src": "images/start-desktop.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "platform": "macos",
             "label": "Trivia App Start Screen"
         },
         {
             "src": "images/question-mobile.png",
             "sizes": "390x844",
             "type": "image/png",
-            "platform": "narrow",
+            "platform": "android",
             "label": "Question shown in Trivia App"
         },
         {
             "src": "images/answered-mobile.png",
             "sizes": "390x844",
             "type": "image/png",
-            "platform": "narrow",
+            "platform": "android",
             "label": "Question answered in Trivia App"
         },
         {
             "src": "images/finished-mobile.png",
             "sizes": "390x844",
             "type": "image/png",
-            "platform": "narrow",
+            "platform": "android",
             "label": "Quiz finished in Trivia App"
         },
         {
             "src": "images/result-mobile.png",
             "sizes": "390x844",
             "type": "image/png",
-            "platform": "narrow",
+            "platform": "android",
             "label": "Checking quiz results in Trivia App"
         },
         {
             "src": "images/start-mobile.png",
             "sizes": "390x844",
             "type": "image/png",
-            "platform": "narrow",
+            "platform": "android",
+            "label": "Trivia App Start Screen"
+        },
+        {
+            "src": "images/question-mobile.png",
+            "sizes": "390x844",
+            "type": "image/png",
+            "platform": "ios",
+            "label": "Question shown in Trivia App"
+        },
+        {
+            "src": "images/answered-mobile.png",
+            "sizes": "390x844",
+            "type": "image/png",
+            "platform": "ios",
+            "label": "Question answered in Trivia App"
+        },
+        {
+            "src": "images/finished-mobile.png",
+            "sizes": "390x844",
+            "type": "image/png",
+            "platform": "ios",
+            "label": "Quiz finished in Trivia App"
+        },
+        {
+            "src": "images/result-mobile.png",
+            "sizes": "390x844",
+            "type": "image/png",
+            "platform": "ios",
+            "label": "Checking quiz results in Trivia App"
+        },
+        {
+            "src": "images/start-mobile.png",
+            "sizes": "390x844",
+            "type": "image/png",
+            "platform": "ios",
             "label": "Trivia App Start Screen"
         }
     ],
     "start_url": ".",
+    "categories": ["education", "books & reference", "games"],
+    "shortcuts": [
+        {
+            "name": "Play Trivia App",
+            "short_name": "Play",
+            "description": "Starts a new game of trivia",
+            "url": "/",
+            "icons": [{ "src": "icons/192x192-icon.png", "sizes": "192x192" }]
+        }
+    ],
     "display": "standalone",
     "theme_color": "#01006e",
     "background_color": "#e4e1ec"

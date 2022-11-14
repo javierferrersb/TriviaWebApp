@@ -1,0 +1,12 @@
+[
+    {
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "dev.javierferrersb.trivia",
+            "sha256_cert_fingerprints": [
+                "77:C9:4C:0E:34:DC:47:9B:AC:66:A2:6A:1E:57:06:B7:C4:01:1A:49:A5:B2:5D:6D:A8:44:3E:30:6F:A0:79:BE"
+            ]
+        }
+    }
+]

@@ -1,0 +1,116 @@
+.question-option {
+    width: 500px;
+    height: 75px;
+
+    background: #fffbff;
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: box-shadow 0.15s ease-in-out;
+}
+.question-option.reviewing {
+    cursor: auto;
+}
+.question-option:active.reviewing {
+    background: #fffbff;
+}
+
+.question-option:active {
+    background: #f1efff;
+}
+
+.question-option.active {
+    background: #01006e;
+}
+
+.question-option.correct.reviewing {
+    background: #456726;
+}
+.question-option.incorrect.reviewing {
+    background: #ba1b1b;
+}
+
+.question-option.correct {
+    background: #456726;
+}
+.question-option.incorrect {
+    background: #ba1b1b;
+}
+.option-letter {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: #5d5d72;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 600;
+    font-size: 21.6358px;
+    line-height: 125%;
+    color: #fffbff;
+
+    margin-left: 25px;
+}
+
+.question-option.active > .option-letter {
+    background: #fffbff;
+    color: #060710;
+}
+.question-option.correct > .option-letter {
+    background: #fffbff;
+    color: #060710;
+}
+.question-option.incorrect > .option-letter {
+    background: #fffbff;
+    color: #060710;
+}
+.option-text {
+    margin-left: 40px;
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 125%;
+
+    color: #060710;
+}
+.question-option.active > .option-text {
+    color: #fffbff;
+}
+.question-option.correct > .option-text {
+    color: #fffbff;
+}
+.question-option.incorrect > .option-text {
+    color: #fffbff;
+}
+
+@media (hover: hover) {
+    .question-option:hover {
+        box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.2);
+    }
+    .question-option:hover.reviewing {
+        box-shadow: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .question-option {
+        width: 90vw;
+    }
+    .option-text {
+        font-size: 18px;
+        margin-left: 15px;
+    }
+    .option-letter {
+        font-size: 18px;
+        margin-left: 15px;
+        height: 35px;
+        width: 35px;
+    }
+}

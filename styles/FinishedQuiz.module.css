@@ -1,0 +1,62 @@
+.replay-button-questions {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 20px;
+
+    border-radius: 15px;
+    width: 190px;
+    height: 52px;
+    background: #01006e;
+    color: #fffbff;
+    border: none;
+
+    font-weight: 600;
+    font-size: 18px;
+
+    margin-top: 20px;
+
+    cursor: pointer;
+
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.replay-button-questions:active {
+    background: #000000;
+}
+
+@media (hover: hover) {
+    .replay-button-questions:hover {
+        box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .replay-button-questions {
+        margin-right: 10px;
+        margin-top: 10px;
+        border-radius: 16px;
+        height: 40px;
+        width: 115px;
+    }
+}
+@media screen and (max-height: 680px) and (min-width: 601px) {
+    .replay-button-questions {
+        position: absolute;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        margin-right: 20px;
+        margin-bottom: 120px;
+    }
+}
+@media screen and (max-width: 940px) and (min-width: 601px) and (max-height: 680px) {
+    .replay-button-questions {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: auto;
+        margin-right: 20px;
+        height: 40px;
+    }
+}

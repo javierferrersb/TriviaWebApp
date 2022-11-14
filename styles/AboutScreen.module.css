@@ -1,0 +1,126 @@
+.about-area {
+    background-color: #dae2f9;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-button {
+    cursor: pointer;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    margin-top: 15px;
+    margin-right: 15px;
+
+    width: 100px;
+    height: 40px;
+
+    border-radius: 16px;
+
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 38px;
+    text-align: center;
+    background-color: #131b2c;
+    border: none;
+
+    color: white;
+
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.back-button:active {
+    background-color: #565e71;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.about-message-area {
+    color: #131b2c;
+
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.about-message-title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 125%;
+    text-align: center;
+}
+
+.about-message-text {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 125%;
+    text-align: center;
+
+    margin-top: 10px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 25px;
+}
+.about-message-link {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 125%;
+    text-align: center;
+
+    margin-bottom: 10px;
+}
+
+.about-message-link:visited {
+    color: #131b2c;
+}
+
+.about-message-link:focus {
+    color: #565e71;
+}
+
+.footer-message {
+    color: #131b2c;
+
+    position: absolute;
+    bottom: 0;
+
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 125%;
+    text-align: center;
+
+    text-decoration: none;
+
+    margin-bottom: 20px;
+}
+
+@media (hover: hover) {
+    .about-message-link:hover {
+        color: #565e71;
+    }
+    .about-message-link:hover,
+    .about-message-link:active {
+        color: #565e71;
+    }
+
+    .back-button:hover {
+        box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.2);
+    }
+}

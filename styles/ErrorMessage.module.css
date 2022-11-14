@@ -1,0 +1,39 @@
+.error-area {
+    background-color: #ba1b1b;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.error-message-area {
+    background-color: #ffdad4;
+    height: 500px;
+    width: 500px;
+    max-width: 90vw;
+
+    color: #410001;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 16px;
+
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.error-message-title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 125%;
+    text-align: center;
+}
+.error-message-text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 125%;
+    text-align: center;
+}
